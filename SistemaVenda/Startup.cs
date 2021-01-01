@@ -33,9 +33,9 @@ namespace SistemaVenda
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            var connectionString = "";
+            var connectionString = @"Data Source=localhost\SQLSERVER;Initial Catalog=MY_STOCK;Integrated Security=True;";
 
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDistributedMemoryCache();

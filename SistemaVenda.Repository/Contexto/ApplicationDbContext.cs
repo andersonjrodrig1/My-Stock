@@ -16,6 +16,15 @@ namespace SistemaVenda.DAL
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<VendaProdutos> VendaProdutos { get; set; }
 
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        { 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new VendaProdutosConfiguracao());
