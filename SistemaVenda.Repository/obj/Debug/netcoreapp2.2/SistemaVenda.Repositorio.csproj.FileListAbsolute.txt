@@ -1,0 +1,12 @@
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Repositorio.deps.json
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Repositorio.dll
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Repositorio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.csprojAssemblyReference.cache
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.AssemblyInfoInputs.cache
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.AssemblyInfo.cs
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.csproj.CoreCompileInputs.cache
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.csproj.CopyComplete
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.dll
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.pdb

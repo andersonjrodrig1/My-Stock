@@ -1,0 +1,223 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj": {}
+  },
+  "projects": {
+    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+        "projectName": "SistemaVenda.Dominio",
+        "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
+        "projectName": "SistemaVenda.Repositorio",
+        "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
+                "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
+        "projectName": "SistemaVenda",
+        "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
+        "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
+        "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {
+              "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
+                "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
