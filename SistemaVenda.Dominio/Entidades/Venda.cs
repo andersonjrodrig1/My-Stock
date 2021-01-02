@@ -9,13 +9,7 @@ namespace SistemaVenda.Dominio.Entidades
     {
         public int Codigo { get; set; }
         public DateTime Data { get; set; }
-
-        #region Cliente
-        public int CodigoCliente { get; set; }
-        public virtual Cliente Cliente { get; set; }
-        #endregion
-
+        public int CodigoCliente { get; set; } 
         public decimal Total { get; set; }
-        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }

@@ -5,6 +5,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20210102020246_initial-create.cs" />
+    <Compile Remove="Migrations\20210102020246_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102023026_initial-create.cs" />
+    <Compile Remove="Migrations\20210102023026_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102023830_initial-create.cs" />
+    <Compile Remove="Migrations\20210102023830_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102025346_initial-create.cs" />
+    <Compile Remove="Migrations\20210102025346_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102030546_initial-create.cs" />
+    <Compile Remove="Migrations\20210102030546_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102031451_initial-create.cs" />
+    <Compile Remove="Migrations\20210102031451_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102031556_initial-create.cs" />
+    <Compile Remove="Migrations\20210102031556_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102032036_initial-create.cs" />
+    <Compile Remove="Migrations\20210102032036_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102032424_initial-create.cs" />
+    <Compile Remove="Migrations\20210102032424_initial-create.Designer.cs" />
+    <Compile Remove="Migrations\20210102032913_initial-create.cs" />
+    <Compile Remove="Migrations\20210102032913_initial-create.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositorio\" />
   </ItemGroup>
 

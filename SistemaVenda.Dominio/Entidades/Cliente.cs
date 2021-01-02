@@ -12,5 +12,6 @@ namespace SistemaVenda.Dominio.Entidades
         public string CPF_CNPJ { get; set; }
         public string Email { get; set; }
         public string Celular { get; set; }
+        public virtual ICollection<Venda> Vendas { get; set; }
     }
 }

@@ -19,6 +19,8 @@ namespace SistemaVenda.Repositorio.Configuracao
             builder.Property(c => c.CPF_CNPJ).HasColumnName("CPF_CNPJ").HasColumnType("VARCHAR(15)").HasMaxLength(15).IsRequired();
             builder.Property(c => c.Email).HasColumnName("EMAIL").HasColumnType("VARCHAR(30)").HasMaxLength(30).IsRequired();
             builder.Property(c => c.Celular).HasColumnName("CELULAR").HasColumnType("VARCHAR(15)").HasMaxLength(15).IsRequired();
+
+            builder.HasMany(v => v.Vendas).WithOne().HasForeignKey(v => v.CodigoCliente).HasConstraintName("FK_VENDA_CLIENTE_CODIGO_CLIENTE").OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

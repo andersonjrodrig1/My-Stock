@@ -33,7 +33,7 @@ namespace SistemaVenda
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            var connectionString = @"Data Source=localhost\SQLSERVER;Initial Catalog=MY_STOCK;Integrated Security=True;";
+            var connectionString = @"Data Source=localhost;Initial Catalog=MY_STOCK;Integrated Security=True;";
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
