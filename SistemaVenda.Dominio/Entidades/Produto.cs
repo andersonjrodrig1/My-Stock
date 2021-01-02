@@ -14,7 +14,7 @@ namespace SistemaVenda.Dominio.Entidades
 
         #region Categoria
         public int CodigoCategoria { get; set; }
-        public Categoria Categoria { get; set; }
+        public virtual Categoria Categoria { get; set; }
         #endregion
     }
 }

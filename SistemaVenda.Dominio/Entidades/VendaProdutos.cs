@@ -9,12 +9,12 @@ namespace SistemaVenda.Dominio.Entidades
     {
         #region Venda
         public int CodigoVenda { get; set; }
-        public Venda Venda { get; set; }
+        public virtual Venda Venda { get; set; }
         #endregion
 
         #region Produto
         public int CodigoProduto { get; set; }
-        public Produto Produto { get; set; }
+        public virtual Produto Produto { get; set; }
         #endregion
 
         public double Quantidade { get; set; }

@@ -10,9 +10,9 @@ namespace SistemaVenda.DAL
 {
     public class ApplicationDbContext : DbContext
     {
+        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<VendaProdutos> VendaProdutos { get; set; }
 
@@ -22,11 +22,17 @@ namespace SistemaVenda.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies();
+
             base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new CategoriaConfiguracao());
+            modelBuilder.ApplyConfiguration(new ClienteConfiguracao());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());
+            modelBuilder.ApplyConfiguration(new VendaConfiguracao());
             modelBuilder.ApplyConfiguration(new VendaProdutosConfiguracao());
 
             base.OnModelCreating(modelBuilder);

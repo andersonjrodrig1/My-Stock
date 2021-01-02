@@ -7,15 +7,15 @@ namespace SistemaVenda.Dominio.Entidades
 {
     public class Venda
     {
-        public int? Codigo { get; set; }
+        public int Codigo { get; set; }
         public DateTime Data { get; set; }
 
         #region Cliente
         public int CodigoCliente { get; set; }
-        public Cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
         #endregion
 
         public decimal Total { get; set; }
-        public ICollection<Produto> Produtos { get; set; }
+        public virtual ICollection<Produto> Produtos { get; set; }
     }
 }
