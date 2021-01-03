@@ -1,1 +1,40 @@
-﻿
+﻿@model IEnumerable<SistemaVenda.Dominio.Entidades.Cliente>;
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>CPF_CNPJ</th>
+            <th>Email</th>
+            <th>Celular</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Codigo</td>
+                <td>@item.Nome</td>
+                <td>@item.CPF_CNPJ</td>
+                <td>@item.Email</td>
+                <td>@item.Celular</td>
+                <td><a asp-action="Cadastro" asp-route-id="@item.Codigo">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<form asp-action="Cadastro">
+    <input class="btn btn-block btn-primary" type="submit" value="Cadastrar Cliente" />
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

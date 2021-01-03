@@ -1,1 +1,51 @@
-﻿
+﻿@model SistemaVenda.Models.CategoriaViewModel;
+
+@{
+    var disabled = (Model.Codigo == default(int)) ? "disabled" : "enabled";
+
+    ViewData["Title"] = "Categorias";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<form asp-controller="Categoria" asp-action="Cadastro" method="post">
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
+    <div class="form-group">
+        <div class="col-6">
+            <label>Descrição:</label>
+            <input type="text" asp-for="Descricao" value="@Model.Descricao" class="form-control" />
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="col">
+            <input type="button" class="btn btn-info" value="Novo" onclick="novo()" />
+            <input type="submit" class="btn btn-success" value="Gravar" asp-action="Gravar" />
+            <input type="button" class="btn btn-warning" value="Listagem" onclick="listar()" />
+            <input type="button" class="btn btn-danger" value="Excluir"  onclick="excluir(@Model.Codigo)" @disabled />
+        </div>
+    </div>
+</form>
+
+<script>
+    function request(request) {
+        var location = window.origin + "\\Categoria\\" + request;
+        window.location = location;
+    }
+
+    function novo() {
+        request("Cadastro");
+    }
+
+    function listar() {
+        request("Index");
+    }
+
+    function excluir(id) {
+        var path = "Excluir\\" + id;
+        request(path);
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

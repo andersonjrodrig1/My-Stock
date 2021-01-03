@@ -1,1 +1,68 @@
-﻿
+﻿@model SistemaVenda.Models.ClienteViewModel;
+
+@{
+    var disabled = (Model.Codigo == default(int)) ? "disabled" : "enabled";
+
+    ViewData["Title"] = "Cliente";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<form asp-controller="Cliente" asp-action="Cadastro" method="post">
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
+    <div class="form-group">
+        <div class="col-4">
+            <label>Nome:</label>
+            <input type="text" asp-for="Nome" value="@Model.Nome" class="form-control" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="col-4">
+            <label>CPF/CNPJ:</label>
+            <input type="text" asp-for="CPF_CNPJ" value="@Model.CPF_CNPJ" class="form-control" />
+            <span asp-validation-for="CPF_CNPJ" class="text-danger"></span>
+        </div>
+        <div class="col-4">
+            <label>Email:</label>
+            <input type="email" asp-for="Email" value="@Model.Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="col-4">
+            <label>Celular:</label>
+            <input type="text" asp-for="Celular" value="@Model.Celular" class="form-control" />
+            <span asp-validation-for="Celular" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div>
+        <div class="col">
+            <input type="button" class="btn btn-info" value="Novo" onclick="novo()" />
+            <input type="submit" class="btn btn-success" value="Gravar" asp-action="Gravar" />
+            <input type="button" class="btn btn-warning" value="Listagem" onclick="listar()" />
+            <input type="button" class="btn btn-danger" value="Excluir" onclick="excluir(@Model.Codigo)" @disabled />
+        </div>
+    </div>
+</form>
+
+<script>
+    function request(request) {
+        var location = window.origin + "\\Cliente\\" + request;
+        window.location = location;
+    }
+
+    function novo() {
+        request("Cadastro");
+    }
+
+    function listar() {
+        request("Index");
+    }
+
+    function excluir(id) {
+        var path = "Excluir\\" + id;
+        request(path);
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
