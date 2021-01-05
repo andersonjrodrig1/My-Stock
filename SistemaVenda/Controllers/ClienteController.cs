@@ -20,7 +20,6 @@ namespace SistemaVenda.Controllers
                 new Cliente { Codigo = 3, Nome = "Jose", CPF_CNPJ = "09923456780", Email = "jose@teste.com", Celular = "34998833365" }
             };
 
-
             return View(list);
         }
 

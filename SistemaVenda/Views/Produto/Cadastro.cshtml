@@ -1,1 +1,73 @@
-﻿
+﻿@model SistemaVenda.Models.ProdutoViewModel;
+
+@{
+    var disabled = (Model.Codigo == default(int)) ? "disabled" : "enabled";
+
+    ViewData["Title"] = "Produtos";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<form asp-controller="Produto" asp-action="Cadastro" method="post">
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
+    <div class="form-group">
+        <div class="col-4">
+            <label>Descrição:</label>
+            <input type="text" asp-for="Descricao" value="@Model.Descricao" class="form-control" />
+            <span asp-validation-for="Descricao" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Quantidade:</label>
+            <input type="number" asp-for="Quantidade" value="@Model.Quantidade" class="form-control" />
+            <span asp-validation-for="Quantidade" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Valor:</label>
+            <input type="text" asp-for="Valor" value="@Model.Valor" class="form-control" />
+            <span asp-validation-for="Valor" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4">
+            <label>Categorias:</label>
+            <input type="hidden" asp-for="CodigoCategoria" class="form-control" />
+            <select class="form-control" asp-for="CodigoCategoria" asp-items="@(new SelectList(Model.Categorias, "Value", "Text"))"></select>
+            <span asp-validation-for="Categorias" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="col">
+        <input type="button" class="btn btn-info" value="Novo" onclick="novo()" />
+        <input type="submit" class="btn btn-success" value="Gravar" asp-action="Gravar" />
+        <input type="button" class="btn btn-warning" value="Listagem" onclick="listar()" />
+        <input type="button" class="btn btn-danger" value="Excluir" onclick="excluir(@Model.Codigo)" @disabled />
+    </div>
+</form>
+
+<script>
+    function request(request) {
+        var location = window.origin + "\\Produto\\" + request;
+        window.location = location;
+    }
+
+    function novo() {
+        request("Cadastro");
+    }
+
+    function listar() {
+        request("Index");
+    }
+
+    function excluir(id) {
+        var path = "Excluir\\" + id;
+        request(path);
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
