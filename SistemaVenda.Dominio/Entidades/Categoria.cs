@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Entidades
 {
-    public class Categoria
+    public class Categoria : ClasseBase
     {
-        public int Codigo { get; set; }
         public string Descricao { get; set; }
     }
 }

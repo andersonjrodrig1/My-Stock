@@ -1,1 +1,77 @@
-﻿
+﻿@model SistemaVenda.Models.VendaViewModel;
+
+@{ 
+    var disabled = (Model.Codigo == default(int)) ? "disabled" : "enabled";
+
+    ViewData["Title"] = "Vendas";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr />
+<form asp-controller="Venda" asp-action="Cadastro" method="post">
+    <input type="hidden" asp-for="Codigo" value="@Model.Codigo" />
+    <div class="row">
+        <div class="form-group col-4">
+            <label>Data:</label>
+            <input type="date" asp-for="Data" value="@Model.Data" class="form-control" />
+            <span asp-validation-for="Data" class="text-danger"></span>
+        </div>
+        <div class="form-group col-5">
+            <input type="hidden" asp-for="CodigoCliente" value="@Model.CodigoCliente" />
+            <label>Cliente:</label>
+            <select asp-items="@Model.Clientes" class="form-control"></select>
+            <span asp-validation-for="Clientes" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-4">
+            <label>Produto:</label>
+            <select asp-items="@Model.Produtos" class="form-control"></select>
+            <span asp-validation-for="Produtos" class="text-danger"></span>
+        </div>
+        <div class="form-group col-3">
+            <label>Valor Produto:</label>
+            <input type="number" id="txtValorProduto" class="form-control" disabled />
+        </div>
+        <div class="form-group col-2">
+            <label>Quantidade:</label>
+            <input type="number" id="txtQuantidade" class="form-control" />
+        </div>
+        <div class="form-group col-3">
+            <label>Total:</label>
+            <input type="number" id="txtTotal" value="@Model.Total" class="form-control" disabled />
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-4">
+            <input type="button" onclick="" value="Adicionar" class="btn btn-primary" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="form-group col">
+            <input type="button" class="btn btn-info" value="Novo" onclick="novo()" />
+            <input type="submit" class="btn btn-success" value="Gravar" asp-action="Gravar" />
+            <input type="button" class="btn btn-warning" value="Listagem" onclick="listar()" />
+            <input type="button" class="btn btn-danger" value="Excluir" onclick="excluir(@Model.Codigo)" @disabled />
+        </div>
+    </div>
+</form>
+<br/>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Produto</th>
+            <th>Valor</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="gridProdutos"></tbody>
+</table>
+
+<script>
+
+</script>

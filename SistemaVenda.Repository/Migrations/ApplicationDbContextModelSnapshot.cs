@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SistemaVenda.DAL;
+using SistemaVenda.Repositorio;
 
 namespace SistemaVenda.Repositorio.Migrations
 {
@@ -125,7 +125,7 @@ namespace SistemaVenda.Repositorio.Migrations
                     b.Property<string>("Senha")
                         .IsRequired()
                         .HasColumnName("SENHA")
-                        .HasColumnType("VARCHAR(20)")
+                        .HasColumnType("VARCHAR(100)")
                         .HasMaxLength(20);
 
                     b.HasKey("Codigo");
@@ -195,7 +195,7 @@ namespace SistemaVenda.Repositorio.Migrations
 
             modelBuilder.Entity("SistemaVenda.Dominio.Entidades.Venda", b =>
                 {
-                    b.HasOne("SistemaVenda.Dominio.Entidades.Cliente")
+                    b.HasOne("SistemaVenda.Dominio.Entidades.Cliente", "Cliente")
                         .WithMany("Vendas")
                         .HasForeignKey("CodigoCliente")
                         .HasConstraintName("FK_VENDA_CLIENTE_CODIGO_CLIENTE")

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVenda.Dominio", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVenda.Repositorio", "..\SistemaVenda.Repository\SistemaVenda.Repositorio.csproj", "{B407611F-6C18-44EC-BADB-D390EB61A71E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVenda.Servico", "..\SistemaVenda.Servico\SistemaVenda.Servico.csproj", "{D16C923A-FC19-4EA6-9A65-8010213E41F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaVenda.Servico", "..\SistemaVenda.Servico\SistemaVenda.Servico.csproj", "{D16C923A-FC19-4EA6-9A65-8010213E41F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaVenda.Test", "..\SistemaVenda.Test\SistemaVenda.Test.csproj", "{CC6987CD-2D1A-413E-8C10-83D859691ED1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D16C923A-FC19-4EA6-9A65-8010213E41F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D16C923A-FC19-4EA6-9A65-8010213E41F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D16C923A-FC19-4EA6-9A65-8010213E41F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6987CD-2D1A-413E-8C10-83D859691ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6987CD-2D1A-413E-8C10-83D859691ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6987CD-2D1A-413E-8C10-83D859691ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6987CD-2D1A-413E-8C10-83D859691ED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,30 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@using SistemaVenda.Servico.Helpers;
+
+@inject IHttpContextAccessor _httpContextAccessor;
+
+@{ 
+    var nomeUsuario = string.Empty;
+    var logado = default(int);
+
+    try
+    {
+        nomeUsuario = _httpContextAccessor.HttpContext.Session.GetString(Session.NOME_USUARIO);
+        logado = (int)_httpContextAccessor.HttpContext.Session.GetInt32(Session.LOGADO);
+
+        if (logado != 1)
+        {
+            _httpContextAccessor.HttpContext.Response.Redirect("/Login");
+        }
+    }
+    catch (Exception)
+    {
+
+        _httpContextAccessor.HttpContext.Response.Redirect("/Login");
+    }
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -13,7 +39,7 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -31,10 +57,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Menu</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
                     </ul>
+                </div>
+                <div>
+                    <label>Olá @nomeUsuario. <a href="~/Login/Index/0">Sair</a></label>
                 </div>
             </div>
         </nav>
@@ -48,7 +74,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - My Stock - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2020 - My Stock
         </div>
     </footer>
 

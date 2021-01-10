@@ -17,7 +17,7 @@ namespace SistemaVenda.Repositorio.Configuracao
             builder.Property(u => u.Codigo).HasColumnName("CODIGO").UseSqlServerIdentityColumn().IsRequired();
             builder.Property(u => u.Nome).HasColumnName("NOME").HasColumnType("VARCHAR(50)").HasMaxLength(50).IsRequired();
             builder.Property(u => u.Email).HasColumnName("EMAIL").HasColumnType("VARCHAR(50)").HasMaxLength(50).IsRequired();
-            builder.Property(u => u.Senha).HasColumnName("SENHA").HasColumnType("VARCHAR(20)").HasMaxLength(20).IsRequired();
+            builder.Property(u => u.Senha).HasColumnName("SENHA").HasColumnType("VARCHAR(100)").HasMaxLength(20).IsRequired();
         }
     }
 }

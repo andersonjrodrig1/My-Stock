@@ -5,11 +5,15 @@ using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Entidades
 {
-    public class Venda
+    public class Venda : ClasseBase
     {
-        public int Codigo { get; set; }
         public DateTime Data { get; set; }
-        public int CodigoCliente { get; set; } 
+
+        #region Cliente
+        public int CodigoCliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
+        #endregion
+
         public decimal Total { get; set; }
     }
 }

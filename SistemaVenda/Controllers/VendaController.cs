@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaVenda.Dominio.Entidades;
+using SistemaVenda.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,16 @@ namespace SistemaVenda.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var vendas = new List<Venda>();
+
+            return View(vendas);
+        }
+
+        public IActionResult Cadastro()
+        {
+            var vendaViewModel = new VendaViewModel();
+
+            return View(vendaViewModel);
         }
     }
 }
