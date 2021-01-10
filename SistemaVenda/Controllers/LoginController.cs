@@ -11,9 +11,10 @@ namespace SistemaVenda.Controllers
         private readonly UsuarioServico _usuarioServico;
         private IHttpContextAccessor _httpContextAccessor;
 
-        public LoginController(UsuarioServico usuarioServico)
+        public LoginController(UsuarioServico usuarioServico, IHttpContextAccessor httpContextAccessor)
         {
             _usuarioServico = usuarioServico;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public IActionResult Index(int? id)
