@@ -6,10 +6,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SistemaVenda.Dominio.Interface;
 using SistemaVenda.Dominio.Repositorio;
+using SistemaVenda.Dominio.Servicos;
+using SistemaVenda.Interface;
 using SistemaVenda.Repositorio;
 using SistemaVenda.Repositorio.Repositorio;
-using SistemaVenda.Servico.Servicos;
+using SistemaVenda.Servico;
 
 namespace SistemaVenda
 {
@@ -36,7 +39,9 @@ namespace SistemaVenda
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
-            services.AddScoped<UsuarioServico>();
+            services.AddScoped<IUsuarioServicoApp, UsuarioServicoApp>();
+
+            services.AddScoped<IUsuarioServico, UsuarioServico>();
 
             services.AddTransient<IUsuarioRepositorio, UsuarioRepositorioImpl>();
 

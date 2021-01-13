@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SistemaVenda.Servico.Helpers
+namespace SistemaVenda.Dominio.Helpers
 {
     public static class Session
     {

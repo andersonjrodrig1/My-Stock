@@ -80,5 +80,3 @@ E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\obj\D
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.2\Razor\Views\Venda\Cadastro.cshtml.g.cs
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.2\Razor\Views\Venda\Index.cshtml.g.cs
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.cshtml.g.cs
-E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\bin\Debug\netcoreapp2.2\SistemaVenda.Servico.dll
-E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda\bin\Debug\netcoreapp2.2\SistemaVenda.Servico.pdb

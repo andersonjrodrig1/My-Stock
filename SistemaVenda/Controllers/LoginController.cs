@@ -1,19 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SistemaVenda.Interface;
 using SistemaVenda.Models;
-using SistemaVenda.Servico.Servicos;
-using SistemaVenda.Servico.Helpers;
 
 namespace SistemaVenda.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly UsuarioServico _usuarioServico;
+        private readonly IUsuarioServicoApp _usuarioServicoApp;
         private IHttpContextAccessor _httpContextAccessor;
 
-        public LoginController(UsuarioServico usuarioServico, IHttpContextAccessor httpContextAccessor)
+        public LoginController(IUsuarioServicoApp usuarioServicoApp, IHttpContextAccessor httpContextAccessor)
         {
-            _usuarioServico = usuarioServico;
+            _usuarioServicoApp = usuarioServicoApp;
             _httpContextAccessor = httpContextAccessor;
         }
 
@@ -34,7 +33,7 @@ namespace SistemaVenda.Controllers
 
             if (ModelState.IsValid)
             {
-                var usuario = _usuarioServico.GetUsuario(model.Email, model.Senha);
+                var usuario = _usuarioServicoApp.GetUsuarioAutenticacao(model.Email, model.Senha);
 
                 if (usuario == null)
                 {

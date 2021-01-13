@@ -4555,6 +4555,9 @@
       "SistemaVenda.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.AspNetCore.App": "2.2.0"
+        },
         "compile": {
           "bin/placeholder/SistemaVenda.Dominio.dll": {}
         },
@@ -4577,22 +4580,6 @@
         },
         "runtime": {
           "bin/placeholder/SistemaVenda.Repositorio.dll": {}
-        }
-      },
-      "SistemaVenda.Servico/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Microsoft.AspNetCore.App": "2.2.0",
-          "Microsoft.AspNetCore.Http": "2.2.0",
-          "SistemaVenda.Dominio": "1.0.0",
-          "SistemaVenda.Repositorio": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SistemaVenda.Servico.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SistemaVenda.Servico.dll": {}
         }
       }
     }
@@ -12463,11 +12450,6 @@
       "type": "project",
       "path": "../SistemaVenda.Repository/SistemaVenda.Repositorio.csproj",
       "msbuildProject": "../SistemaVenda.Repository/SistemaVenda.Repositorio.csproj"
-    },
-    "SistemaVenda.Servico/1.0.0": {
-      "type": "project",
-      "path": "../SistemaVenda.Servico/SistemaVenda.Servico.csproj",
-      "msbuildProject": "../SistemaVenda.Servico/SistemaVenda.Servico.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12477,8 +12459,7 @@
       "Microsoft.EntityFrameworkCore.Proxies >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "SistemaVenda.Repositorio >= 1.0.0",
-      "SistemaVenda.Servico >= 1.0.0"
+      "SistemaVenda.Repositorio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12514,9 +12495,6 @@
           "projectReferences": {
             "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
               "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj"
-            },
-            "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Servico\\SistemaVenda.Servico.csproj": {
-              "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Servico\\SistemaVenda.Servico.csproj"
             }
           }
         }

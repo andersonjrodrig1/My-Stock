@@ -7,3 +7,6 @@ E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Domin
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.csproj.CoreCompileInputs.cache
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.json
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.dev.json
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.genruntimeconfig.cache

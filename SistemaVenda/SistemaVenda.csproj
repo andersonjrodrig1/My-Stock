@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SistemaVenda.Repository\SistemaVenda.Repositorio.csproj" />
-    <ProjectReference Include="..\SistemaVenda.Servico\SistemaVenda.Servico.csproj" />
   </ItemGroup>
 
 </Project>

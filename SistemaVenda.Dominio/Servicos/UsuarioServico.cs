@@ -1,13 +1,14 @@
 ﻿using SistemaVenda.Dominio.Repositorio;
 using System;
 using SistemaVenda.Dominio.Entidades;
-using SistemaVenda.Servico.Helpers;
+using SistemaVenda.Dominio.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using SistemaVenda.Dominio.Interface;
 
-namespace SistemaVenda.Servico.Servicos
+namespace SistemaVenda.Dominio.Servicos
 {
-    public class UsuarioServico
+    public class UsuarioServico : IUsuarioServico
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
         private IHttpContextAccessor _httpContextAccessor;
@@ -20,7 +21,7 @@ namespace SistemaVenda.Servico.Servicos
             _logger = logger;
         }
 
-        public Usuario GetUsuario(string email, string senha)
+        public Usuario GetUsuarioAltenticacao(string email, string senha)
         {
             try
             {

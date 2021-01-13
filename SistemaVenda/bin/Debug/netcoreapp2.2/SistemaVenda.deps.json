@@ -29,8 +29,7 @@
           "Microsoft.EntityFrameworkCore.Proxies": "2.2.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "SistemaVenda.Repositorio": "1.0.0",
-          "SistemaVenda.Servico": "1.0.0"
+          "SistemaVenda.Repositorio": "1.0.0"
         },
         "runtime": {
           "SistemaVenda.dll": {}
@@ -122,6 +121,9 @@
         }
       },
       "SistemaVenda.Dominio/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.App": "2.2.0"
+        },
         "runtime": {
           "SistemaVenda.Dominio.dll": {}
         },
@@ -142,20 +144,6 @@
         },
         "compile": {
           "SistemaVenda.Repositorio.dll": {}
-        }
-      },
-      "SistemaVenda.Servico/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.App": "2.2.0",
-          "Microsoft.AspNetCore.Http": "2.2.0",
-          "SistemaVenda.Dominio": "1.0.0",
-          "SistemaVenda.Repositorio": "1.0.0"
-        },
-        "runtime": {
-          "SistemaVenda.Servico.dll": {}
-        },
-        "compile": {
-          "SistemaVenda.Servico.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3408,11 +3396,6 @@
       "sha512": ""
     },
     "SistemaVenda.Repositorio/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SistemaVenda.Servico/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
