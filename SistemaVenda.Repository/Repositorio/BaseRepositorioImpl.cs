@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SistemaVenda.Repositorio.Repositorio
 {
-    public class BaseRepositorioImpl<TEntity> : IBaseRepositorio<TEntity> where TEntity : ClasseBase
+    public abstract class BaseRepositorioImpl<TEntity> : IBaseRepositorio<TEntity> where TEntity : ClasseBase
     {
         private readonly ApplicationDbContext _dbContext;
 

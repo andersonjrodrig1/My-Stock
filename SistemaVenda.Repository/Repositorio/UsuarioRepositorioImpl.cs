@@ -14,11 +14,9 @@ namespace SistemaVenda.Repositorio.Repositorio
             _dbContext = dbContext;
         }
 
-        public Usuario GetUsuarioAutentication(string email, string senha)
-        {
-            IQueryable<Usuario> query = _dbContext.Set<Usuario>().AsQueryable().AsNoTracking();
-
-            return query.FirstOrDefault(x => x.Email.Equals(email) && x.Senha.Equals(senha));
-        }
+        public Usuario GetUsuarioAutentication(string email, string senha) => 
+            _dbContext.Set<Usuario>().AsQueryable()
+                                     .AsNoTracking()
+                                     .FirstOrDefault(x => x.Email.Equals(email) && x.Senha.Equals(senha));
     }
 }

@@ -39,21 +39,24 @@ namespace SistemaVenda
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connectionString));
 
-            services.AddScoped<IUsuarioServicoApp, UsuarioServicoApp>();
-
-            services.AddScoped<IUsuarioServico, UsuarioServico>();
-
-            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorioImpl>();
-
             services.AddHttpContextAccessor();
             services.AddDistributedMemoryCache();
             services.AddSession();
+
+            services.AddScoped<IUsuarioServicoApp, UsuarioServicoApp>();
+            services.AddScoped<ICategoriaServicoApp, CategoriaServicoApp>();
+
+            services.AddScoped<IUsuarioServico, UsuarioServico>();
+            services.AddScoped<ICategoriaServico, CategoriaServico>();
+
+            services.AddTransient<IUsuarioRepositorio, UsuarioRepositorioImpl>();
+            services.AddTransient<ICategoriaRepositorio, CategoriaRepositorioImpl>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -65,8 +68,6 @@ namespace SistemaVenda
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
-            loggerFactory.AddConsole().CreateLogger<Castle.Core.Logging.ConsoleLogger>();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

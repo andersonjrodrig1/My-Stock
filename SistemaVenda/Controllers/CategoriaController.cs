@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.Dominio.Entidades;
+using SistemaVenda.Interface;
 using SistemaVenda.Models;
 using System;
 using System.Collections.Generic;
@@ -10,18 +11,16 @@ namespace SistemaVenda.Controllers
 {
     public class CategoriaController : Controller
     {
+        private readonly ICategoriaServicoApp _categoriaServicoApp;
+
+        public CategoriaController(ICategoriaServicoApp categoriaServicoApp)
+        {
+            _categoriaServicoApp = categoriaServicoApp;
+        }
+
         public IActionResult Index()
         {
-            //mock para renderização
-            var list = new List<Categoria>() 
-            { 
-                new Categoria { Codigo = 1, Descricao = "Livros" },
-                new Categoria { Codigo = 2, Descricao = "Bebidas" },
-                new Categoria { Codigo = 3, Descricao = "Computadores" }
-            };
-
-
-            return View(list);
+            return View(_categoriaServicoApp.GetCategorias());
         }
 
         public IActionResult Cadastro()
