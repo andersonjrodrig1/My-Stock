@@ -4,7 +4,7 @@ using SistemaVenda.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 
 namespace SistemaVenda.Servico
 {
@@ -24,14 +24,18 @@ namespace SistemaVenda.Servico
 
             var categorias = _categoriaServico.GetCategorias();
 
-            //fazer mapeamento dos atributos
-            foreach (var categoria in categorias)
+            if (categorias != null && categorias.Any())
             {
-                viewModel = new CategoriaViewModel();
-                viewModel.Codigo = categoria.Codigo;
-                viewModel.Descricao = categoria.Descricao;
+                var configuracao = new MapperConfiguration(conf => conf.CreateMap<SistemaVenda.Dominio.Entidades.Categoria, CategoriaViewModel>());
+                var mapeamento = configuracao.CreateMapper();
 
-                lista.Add(viewModel);
+                categorias.AsParallel().ForAll(categoria =>
+                {
+                    viewModel = new CategoriaViewModel();
+                    viewModel = mapeamento.Map<CategoriaViewModel>(categoria);
+
+                    lista.Add(viewModel);
+                });
             }
 
             return lista;

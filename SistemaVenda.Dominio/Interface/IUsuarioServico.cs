@@ -7,6 +7,6 @@ namespace SistemaVenda.Dominio.Interface
 {
     public interface IUsuarioServico
     {
-        Usuario GetUsuarioAltenticacao(string email, string senha);
+        Usuario GetUsuarioAutenticacao(string email, string senha);
     }
 }

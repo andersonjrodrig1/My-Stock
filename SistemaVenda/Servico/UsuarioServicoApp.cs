@@ -1,7 +1,7 @@
 ﻿using SistemaVenda.Dominio.Interface;
 using SistemaVenda.Interface;
 using SistemaVenda.Models;
-using System;
+using AutoMapper;
 
 namespace SistemaVenda.Servico
 {
@@ -16,16 +16,19 @@ namespace SistemaVenda.Servico
 
         public UsuarioViewModel GetUsuarioAutenticacao(string email, string senha)
         {
-            var usuario = _usuarioServico.GetUsuarioAltenticacao(email, senha);
+            UsuarioViewModel viewModel = null;
 
-            //TODO: verificar plugin de mapeamento
-            return new UsuarioViewModel()
+            var usuario = _usuarioServico.GetUsuarioAutenticacao(email, senha);
+
+            if (usuario != null)
             {
-                Codigo = usuario.Codigo,
-                Email = usuario.Email,
-                Nome = usuario.Nome,
-                Senha = string.Empty
-            };
+                var configuracao = new MapperConfiguration(conf => conf.CreateMap<SistemaVenda.Dominio.Entidades.Usuario, UsuarioViewModel>());
+
+                var mapeamento = configuracao.CreateMapper();
+                viewModel = mapeamento.Map<UsuarioViewModel>(usuario);
+            }
+
+            return viewModel;
         }
     }
 }

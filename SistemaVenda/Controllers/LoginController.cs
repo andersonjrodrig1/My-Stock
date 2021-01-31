@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SistemaVenda.Dominio.Helpers;
 using SistemaVenda.Interface;
 using SistemaVenda.Models;
 
@@ -41,6 +42,11 @@ namespace SistemaVenda.Controllers
 
                     return View();
                 }
+
+                _httpContextAccessor.HttpContext.Session.SetInt32(Session.CODIGO_USUARIO, usuario.Codigo);
+                _httpContextAccessor.HttpContext.Session.SetString(Session.NOME_USUARIO, usuario.Nome);
+                _httpContextAccessor.HttpContext.Session.SetString(Session.EMAIL_USUARIO, usuario.Email);
+                _httpContextAccessor.HttpContext.Session.SetInt32(Session.LOGADO, 1);
 
                 return RedirectToAction("Index", "Home");
             }

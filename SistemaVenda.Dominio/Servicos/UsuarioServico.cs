@@ -2,7 +2,6 @@
 using System;
 using SistemaVenda.Dominio.Entidades;
 using SistemaVenda.Dominio.Helpers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using SistemaVenda.Dominio.Interface;
 
@@ -11,17 +10,15 @@ namespace SistemaVenda.Dominio.Servicos
     public class UsuarioServico : IUsuarioServico
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        private IHttpContextAccessor _httpContextAccessor;
         private ILogger _logger;
 
-        public UsuarioServico(IUsuarioRepositorio usuarioRepositorio, IHttpContextAccessor httpContextAccessor, ILogger<UsuarioServico> logger)
+        public UsuarioServico(IUsuarioRepositorio usuarioRepositorio, ILogger<UsuarioServico> logger)
         {
             _usuarioRepositorio = usuarioRepositorio;
-            _httpContextAccessor = httpContextAccessor;
             _logger = logger;
         }
 
-        public Usuario GetUsuarioAltenticacao(string email, string senha)
+        public Usuario GetUsuarioAutenticacao(string email, string senha)
         {
             try
             {
@@ -32,16 +29,6 @@ namespace SistemaVenda.Dominio.Servicos
                 _logger.LogInformation($"Busca do usuário com email: {email} para autenticação.");
 
                 var usuario = _usuarioRepositorio.GetUsuarioAutentication(email, senhaMD5hash);
-
-                if (usuario != null)
-                {
-                    _logger.LogInformation("Adicionando informações do usuário na sessão.");
-
-                    _httpContextAccessor.HttpContext.Session.SetInt32(Session.CODIGO_USUARIO, usuario.Codigo);
-                    _httpContextAccessor.HttpContext.Session.SetString(Session.NOME_USUARIO, usuario.Nome);
-                    _httpContextAccessor.HttpContext.Session.SetString(Session.EMAIL_USUARIO, usuario.Email);
-                    _httpContextAccessor.HttpContext.Session.SetInt32(Session.LOGADO, 1);
-                }
 
                 return usuario;
             }
