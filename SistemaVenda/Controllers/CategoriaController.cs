@@ -18,17 +18,30 @@ namespace SistemaVenda.Controllers
             _categoriaServicoApp = categoriaServicoApp;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View(_categoriaServicoApp.GetCategorias());
+            var models = await _categoriaServicoApp.GetCategorias();
+
+            return View(models);
         }
 
         public IActionResult Cadastro()
         {
-            //mock para renderização
-            CategoriaViewModel model = new CategoriaViewModel();
-            model.Codigo = 1;
-            model.Descricao = "Livros";
+            var model = new CategoriaViewModel();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Gravar(CategoriaViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                await _categoriaServicoApp.SaveCategoria(model);
+
+                return RedirectToAction("Index");
+            }
 
             return View(model);
         }

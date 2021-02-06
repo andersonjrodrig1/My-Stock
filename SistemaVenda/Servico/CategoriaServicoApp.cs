@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Servico
 {
@@ -17,12 +18,12 @@ namespace SistemaVenda.Servico
             _categoriaServico = categoriaServico;
         }
 
-        public IEnumerable<CategoriaViewModel> GetCategorias()
+        public async Task<IEnumerable<CategoriaViewModel>> GetCategorias()
         {
             var lista = new List<CategoriaViewModel>();
             CategoriaViewModel viewModel = null;
 
-            var categorias = _categoriaServico.GetCategorias();
+            var categorias = await _categoriaServico.GetCategorias();
 
             if (categorias != null && categorias.Any())
             {
@@ -41,9 +42,13 @@ namespace SistemaVenda.Servico
             return lista;
         }
 
-        public CategoriaViewModel SaveCategoria(CategoriaViewModel categoria)
+        public async Task SaveCategoria(CategoriaViewModel viewModel)
         {
-            throw new NotImplementedException();
+            var configuracao = new MapperConfiguration(conf => conf.CreateMap<CategoriaViewModel, SistemaVenda.Dominio.Entidades.Categoria>());
+            var mapeamento = configuracao.CreateMapper();
+            var categoria = mapeamento.Map<SistemaVenda.Dominio.Entidades.Categoria>(viewModel);
+
+            await _categoriaServico.SaveCategoria(categoria);
         }
     }
 }

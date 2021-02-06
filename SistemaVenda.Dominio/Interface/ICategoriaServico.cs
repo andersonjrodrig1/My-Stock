@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Interface
 {
     public interface ICategoriaServico
     {
-        Categoria SaveCategoria(Categoria categoria);
-        IEnumerable<Categoria> GetCategorias();
+        Task SaveCategoria(Categoria categoria);
+        Task<IEnumerable<Categoria>> GetCategorias();
     }
 }

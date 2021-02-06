@@ -4,6 +4,7 @@ using SistemaVenda.Dominio.Entidades;
 using SistemaVenda.Dominio.Helpers;
 using Microsoft.Extensions.Logging;
 using SistemaVenda.Dominio.Interface;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Servicos
 {
@@ -18,7 +19,7 @@ namespace SistemaVenda.Dominio.Servicos
             _logger = logger;
         }
 
-        public Usuario GetUsuarioAutenticacao(string email, string senha)
+        public async Task<Usuario> GetUsuarioAutenticacao(string email, string senha)
         {
             try
             {
@@ -28,9 +29,7 @@ namespace SistemaVenda.Dominio.Servicos
 
                 _logger.LogInformation($"Busca do usuário com email: {email} para autenticação.");
 
-                var usuario = _usuarioRepositorio.GetUsuarioAutentication(email, senhaMD5hash);
-
-                return usuario;
+                return await _usuarioRepositorio.GetUsuarioAutentication(email, senhaMD5hash);
             }
             catch (Exception ex)
             {

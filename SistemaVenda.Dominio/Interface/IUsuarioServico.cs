@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Interface
 {
     public interface IUsuarioServico
     {
-        Usuario GetUsuarioAutenticacao(string email, string senha);
+        Task<Usuario> GetUsuarioAutenticacao(string email, string senha);
     }
 }

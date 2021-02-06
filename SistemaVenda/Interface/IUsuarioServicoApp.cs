@@ -8,6 +8,6 @@ namespace SistemaVenda.Interface
 {
     public interface IUsuarioServicoApp
     {
-        UsuarioViewModel GetUsuarioAutenticacao(string email, string senha);
+        Task<UsuarioViewModel> GetUsuarioAutenticacao(string email, string senha);
     }
 }

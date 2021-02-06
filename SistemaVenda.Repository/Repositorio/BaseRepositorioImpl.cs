@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Repositorio.Repositorio
 {
@@ -17,28 +18,28 @@ namespace SistemaVenda.Repositorio.Repositorio
             _dbContext = dbContext;
         }
 
-        public TEntity Add(TEntity entity)
+        public async Task<TEntity> Add(TEntity entity)
         {
-            _dbContext.Add(entity);
-            _dbContext.SaveChanges(true);
+            await _dbContext.AddAsync(entity);
+            await _dbContext.SaveChangesAsync(true);
 
             return entity;
         }
 
-        public TEntity Get(int id) => _dbContext.Set<TEntity>().AsQueryable().FirstOrDefault(x => x.Codigo == id);
+        public async Task<TEntity> Get(int id) => await _dbContext.Set<TEntity>().AsQueryable().FirstOrDefaultAsync(x => x.Codigo == id);
 
-        public IEnumerable<TEntity> GetAll() => _dbContext.Set<TEntity>().AsQueryable().AsNoTracking().ToList();
+        public async Task<IEnumerable<TEntity>> GetAll() => await _dbContext.Set<TEntity>().AsQueryable().AsNoTracking().ToListAsync();
 
-        public void Remove(TEntity entity)
+        public async Task Remove(TEntity entity)
         {
             _dbContext.Remove(entity);
-            _dbContext.SaveChanges(true);
+            await _dbContext.SaveChangesAsync(true);
         }
 
-        public TEntity Update(TEntity entity)
+        public async Task<TEntity> Update(TEntity entity)
         {
             _dbContext.Update(entity);
-            _dbContext.SaveChanges(true);
+            await _dbContext.SaveChangesAsync(true);
 
             return entity;
         }

@@ -8,7 +8,7 @@ namespace SistemaVenda.Interface
 {
     public interface ICategoriaServicoApp
     {
-        CategoriaViewModel SaveCategoria(CategoriaViewModel categoria);
-        IEnumerable<CategoriaViewModel> GetCategorias();
+        Task SaveCategoria(CategoriaViewModel categoria);
+        Task<IEnumerable<CategoriaViewModel>> GetCategorias();
     }
 }

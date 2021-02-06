@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.Dominio.Helpers;
 using SistemaVenda.Interface;
 using SistemaVenda.Models;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Controllers
 {
@@ -28,13 +29,13 @@ namespace SistemaVenda.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(LoginViewModel model)
+        public async Task<IActionResult> Index(LoginViewModel model)
         {
             ViewData["ErroLogin"] = string.Empty;
 
             if (ModelState.IsValid)
             {
-                var usuario = _usuarioServicoApp.GetUsuarioAutenticacao(model.Email, model.Senha);
+                var usuario = await _usuarioServicoApp.GetUsuarioAutenticacao(model.Email, model.Senha);
 
                 if (usuario == null)
                 {

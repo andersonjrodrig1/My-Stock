@@ -4,7 +4,9 @@ using SistemaVenda.Dominio.Interface;
 using SistemaVenda.Dominio.Repositorio;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Servicos
 {
@@ -19,13 +21,13 @@ namespace SistemaVenda.Dominio.Servicos
             _logger = logger;
         }
 
-        public IEnumerable<Categoria> GetCategorias()
+        public async Task<IEnumerable<Categoria>> GetCategorias()
         {
             try
             {
                 _logger.LogInformation("Buscar das categorias na base de dados.");
-                
-                return _categoriaRepositorio.GetAll();
+
+                return await _categoriaRepositorio.GetAll();
             }
             catch (Exception ex)
             {
@@ -34,9 +36,19 @@ namespace SistemaVenda.Dominio.Servicos
             }
         }
 
-        public Categoria SaveCategoria(Categoria categoria)
+        public async Task SaveCategoria(Categoria categoria)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _logger.LogInformation("Salvando nova categoria.");
+
+                await _categoriaRepositorio.Add(categoria);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao salvar categoria. Detalhes: {ex.Message}");
+                throw;
+            }
         }
     }
 }
