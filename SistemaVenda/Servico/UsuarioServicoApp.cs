@@ -1,5 +1,5 @@
 ﻿using SistemaVenda.Dominio.Interface;
-using SistemaVenda.Interface;
+using SistemaVenda.Servico.Interface;
 using SistemaVenda.Models;
 using AutoMapper;
 using System.Threading.Tasks;

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.Dominio.Entidades;
-using SistemaVenda.Interface;
+using SistemaVenda.Servico.Interface;
 using SistemaVenda.Models;
 using System;
 using System.Collections.Generic;
@@ -26,9 +26,15 @@ namespace SistemaVenda.Controllers
             return View(models);
         }
 
-        public IActionResult Cadastro()
+        [Route("Categoria/Cadastro/{id?}")]
+        public async Task<IActionResult> Cadastro(int? id)
         {
             var model = new CategoriaViewModel();
+
+            if (id.HasValue)
+            {
+                model = await _categoriaServicoApp.GetCategoria(id.Value);
+            }
 
             return View(model);
         }

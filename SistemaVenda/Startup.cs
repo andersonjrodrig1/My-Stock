@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using SistemaVenda.Dominio.Interface;
 using SistemaVenda.Dominio.Repositorio;
 using SistemaVenda.Dominio.Servicos;
-using SistemaVenda.Interface;
+using SistemaVenda.Servico.Interface;
 using SistemaVenda.Repositorio;
 using SistemaVenda.Repositorio.Repositorio;
 using SistemaVenda.Servico;
@@ -45,12 +44,15 @@ namespace SistemaVenda
 
             services.AddScoped<IUsuarioServicoApp, UsuarioServicoApp>();
             services.AddScoped<ICategoriaServicoApp, CategoriaServicoApp>();
+            services.AddScoped<IProdutoServicoApp, ProdutoServicoApp>();
 
             services.AddScoped<IUsuarioServico, UsuarioServico>();
             services.AddScoped<ICategoriaServico, CategoriaServico>();
+            services.AddScoped<IProdutoService, ProdutoServico>();
 
             services.AddTransient<IUsuarioRepositorio, UsuarioRepositorioImpl>();
             services.AddTransient<ICategoriaRepositorio, CategoriaRepositorioImpl>();
+            services.AddTransient<IProdutoRepositorio, ProdutoRepositorioImpl>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

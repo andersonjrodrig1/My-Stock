@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.Dominio.Helpers;
-using SistemaVenda.Interface;
+using SistemaVenda.Servico.Interface;
 using SistemaVenda.Models;
 using System.Threading.Tasks;
 

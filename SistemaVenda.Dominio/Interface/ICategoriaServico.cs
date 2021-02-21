@@ -8,7 +8,9 @@ namespace SistemaVenda.Dominio.Interface
 {
     public interface ICategoriaServico
     {
-        Task SaveCategoria(Categoria categoria);
         Task<IEnumerable<Categoria>> GetCategorias();
+        Task<Categoria> GetCategoria(int codigoCategoria);
+        Task SaveCategoria(Categoria categoria);
+        Task EditarCategoria(Categoria categoria);
     }
 }

@@ -36,6 +36,26 @@ namespace SistemaVenda.Dominio.Servicos
             }
         }
 
+        public async Task<Categoria> GetCategoria(int codigoCategoria)
+        {
+            try
+            {
+                _logger.LogInformation($"Busca de categoria por codigo. Codigo: {codigoCategoria}");
+
+                var categoria = await _categoriaRepositorio.Get(codigoCategoria);
+
+                if (categoria == null)
+                    throw new Exception("Not found");
+
+                return categoria;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao salvar categoria. Detalhes: {ex.Message}");
+                throw;
+            }
+        }
+
         public async Task SaveCategoria(Categoria categoria)
         {
             try
@@ -47,6 +67,21 @@ namespace SistemaVenda.Dominio.Servicos
             catch (Exception ex)
             {
                 _logger.LogError($"Erro ao salvar categoria. Detalhes: {ex.Message}");
+                throw;
+            }
+        }
+
+        public async Task EditarCategoria(Categoria categoria)
+        {
+            try
+            {
+                _logger.LogInformation("Atualizando categoria.");
+
+                await _categoriaRepositorio.Update(categoria);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao atualizar categoria. Detalhes: {ex.Message}");
                 throw;
             }
         }

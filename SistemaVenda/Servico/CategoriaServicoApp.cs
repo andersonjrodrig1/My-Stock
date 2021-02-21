@@ -1,5 +1,5 @@
 ﻿using SistemaVenda.Dominio.Interface;
-using SistemaVenda.Interface;
+using SistemaVenda.Servico.Interface;
 using SistemaVenda.Models;
 using System;
 using System.Collections.Generic;
@@ -39,7 +39,18 @@ namespace SistemaVenda.Servico
                 });
             }
 
-            return lista;
+            return lista.OrderBy(l => l.Codigo);
+        }
+
+        public async Task<CategoriaViewModel> GetCategoria(int codigoCategoria)
+        {
+            var categoria = await _categoriaServico.GetCategoria(codigoCategoria);
+
+            var configuracao = new MapperConfiguration(conf => conf.CreateMap<SistemaVenda.Dominio.Entidades.Categoria, CategoriaViewModel>());
+            var mapeamento = configuracao.CreateMapper();
+            var viewModel = mapeamento.Map<CategoriaViewModel>(categoria);
+
+            return viewModel;
         }
 
         public async Task SaveCategoria(CategoriaViewModel viewModel)
@@ -48,7 +59,14 @@ namespace SistemaVenda.Servico
             var mapeamento = configuracao.CreateMapper();
             var categoria = mapeamento.Map<SistemaVenda.Dominio.Entidades.Categoria>(viewModel);
 
-            await _categoriaServico.SaveCategoria(categoria);
+            if (categoria.Codigo > 0)
+            {
+                await _categoriaServico.EditarCategoria(categoria);
+            }
+            else
+            {
+                await _categoriaServico.SaveCategoria(categoria);
+            }
         }
     }
 }
