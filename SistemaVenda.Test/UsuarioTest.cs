@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SistemaVenda.Dominio.Servicos;
 using SistemaVenda.Dominio.Interface;
 using Microsoft.Extensions.Logging;
+using FluentAssertions;
 
 namespace SistemaVenda.Test
 {
@@ -32,14 +33,10 @@ namespace SistemaVenda.Test
         {
             _usuario = _fixture.Create<Usuario>();
 
-            var usuarioRepositorioMock = _usuarioRepositorio.Setup(u => u.GetUsuarioAutentication(It.IsAny<string>(), It.IsAny<string>()))
-                                                            .ReturnsAsync((string email, string senha) => _usuario);
-
+            _usuarioRepositorio.Setup(u => u.GetUsuarioAutentication(It.IsAny<string>(), It.IsAny<string>())).ReturnsAsync((string email, string senha) => _usuario);
             var usuarioResult = await _usuarioServico.GetUsuarioAutenticacao(_usuario.Email, _usuario.Senha);
 
-            Assert.Equal(usuarioResult.Email, _usuario.Email);
-            Assert.Equal(usuarioResult.Senha, _usuario.Senha);
-            Assert.Equal(usuarioResult.Nome, _usuario.Nome);
+            usuarioResult.Should().BeEquivalentTo(_usuario);
         }
     }
 }

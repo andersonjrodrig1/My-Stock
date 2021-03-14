@@ -19,6 +19,7 @@ namespace SistemaVenda.Dominio.Servicos
             _produtoRepositorio = produtoRepositorio;
             _logger = logger;
         }
+
         public async Task<IEnumerable<Produto>> GetProdutos()
         {
             try

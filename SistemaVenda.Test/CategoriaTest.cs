@@ -9,15 +9,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using FluentAssertions;
+using Bogus;
 
 namespace SistemaVenda.Test
 {
     [Collection("Categoria")]
     public class CategoriaTest
     {
-        private Mock<ICategoriaRepositorio> _categoriaRepositorio;
-        private ICategoriaServico _categoriaServico;
-        private ILogger<CategoriaServico> _loggerCategoria;
+        private readonly Mock<ICategoriaRepositorio> _categoriaRepositorio;
+        private readonly ICategoriaServico _categoriaServico;
+        private readonly ILogger<CategoriaServico> _loggerCategoria;
+
         private IList<Categoria> _categorias;
         private Categoria _categoria;
         private Fixture _fixture;
@@ -33,18 +36,15 @@ namespace SistemaVenda.Test
         [Fact]
         public async Task GetCategoriasTest()
         {
-            _categorias = new List<Categoria>()
-            {
-                { new Fixture().Create<Categoria>() },
-                { new Fixture().Create<Categoria>() },
-                { new Fixture().Create<Categoria>() },
-                { new Fixture().Create<Categoria>() }
-            };
+            var faker = new Faker<Categoria>("pt_BR").RuleFor(c => c.Codigo, f => f.Random.Int())
+                                                     .RuleFor(c => c.Descricao, f => f.Name.ToString());
 
-            var categoriaRepositorioMock = _categoriaRepositorio.Setup(c => c.GetAll()).ReturnsAsync(() => _categorias);
+            _categorias = faker.Generate(100);
+
+            _categoriaRepositorio.Setup(c => c.GetAll()).ReturnsAsync(() => _categorias);
             var categoriaResult = await _categoriaServico.GetCategorias();
 
-            Assert.True(categoriaResult.Any());
+            categoriaResult.Should().NotBeEmpty();
         }
 
         [Fact]
@@ -52,11 +52,10 @@ namespace SistemaVenda.Test
         {
             _categoria = _fixture.Create<Categoria>();
 
-            var categoriaRepositorioMock = _categoriaRepositorio.Setup(c => c.Get(It.IsAny<int>())).ReturnsAsync((int codigo) => _categoria);
+            _categoriaRepositorio.Setup(c => c.Get(It.IsAny<int>())).ReturnsAsync((int codigo) => _categoria);
             var categoriaResult = await _categoriaServico.GetCategoria(_categoria.Codigo);
 
-            Assert.Equal(categoriaResult.Codigo, _categoria.Codigo);
-            Assert.Equal(categoriaResult.Descricao, _categoria.Descricao);
+            categoriaResult.Should().BeEquivalentTo(_categoria);
         }
 
         [Fact]
@@ -64,7 +63,7 @@ namespace SistemaVenda.Test
         {
             _categoria = _fixture.Create<Categoria>();
 
-            var categoriaRepositorioMock = _categoriaRepositorio.Setup(c => c.Add(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
+            _categoriaRepositorio.Setup(c => c.Add(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
             await _categoriaServico.SaveCategoria(_categoria);
 
             Assert.True(true);
@@ -75,7 +74,7 @@ namespace SistemaVenda.Test
         {
             _categoria = _fixture.Create<Categoria>();
 
-            var categoriaRepositorioMock2 = _categoriaRepositorio.Setup(c => c.Update(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
+            _categoriaRepositorio.Setup(c => c.Update(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
             await _categoriaServico.EditarCategoria(_categoria);
 
             Assert.True(true);
