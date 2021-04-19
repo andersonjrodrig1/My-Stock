@@ -30,6 +30,8 @@ namespace SistemaVenda.Repositorio
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
             modelBuilder.ApplyConfiguration(new CategoriaConfiguracao());
             modelBuilder.ApplyConfiguration(new ClienteConfiguracao());
             modelBuilder.ApplyConfiguration(new UsuarioConfiguracao());

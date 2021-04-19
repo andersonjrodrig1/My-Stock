@@ -35,6 +35,21 @@ namespace SistemaVenda.Dominio.Servicos
             }
         }
 
+        public async Task<Produto> SalvarProduto(Produto produto)
+        {
+            try
+            {
+                _logger.LogInformation("Salvando novo produto");
+
+                return await _produtoRepositorio.Add(produto);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Erro ao buscar produtos. Detalhes: {ex.Message}");
+                throw;
+            }
+        }
+
         public void Dispose()
         {
             _produtoRepositorio = null;

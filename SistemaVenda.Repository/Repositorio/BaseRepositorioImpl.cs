@@ -30,10 +30,12 @@ namespace SistemaVenda.Repositorio.Repositorio
 
         public async Task<IEnumerable<TEntity>> GetAll() => await _dbContext.Set<TEntity>().AsQueryable().AsNoTracking().ToListAsync();
 
-        public async Task Remove(TEntity entity)
+        public async Task<TEntity> Remove(TEntity entity)
         {
             _dbContext.Remove(entity);
             await _dbContext.SaveChangesAsync(true);
+
+            return entity;
         }
 
         public async Task<TEntity> Update(TEntity entity)

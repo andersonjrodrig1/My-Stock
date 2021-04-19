@@ -12,7 +12,7 @@ namespace SistemaVenda.Dominio.Servicos
 {
     public class CategoriaServico : ICategoriaServico
     {
-        private readonly ICategoriaRepositorio _categoriaRepositorio;
+        private ICategoriaRepositorio _categoriaRepositorio;
         private ILogger _logger;
 
         public CategoriaServico(ICategoriaRepositorio categoriaRepositorio, ILogger<CategoriaServico> logger)
@@ -56,13 +56,13 @@ namespace SistemaVenda.Dominio.Servicos
             }
         }
 
-        public async Task SaveCategoria(Categoria categoria)
+        public async Task<Categoria> SaveCategoria(Categoria categoria)
         {
             try
             {
                 _logger.LogInformation("Salvando nova categoria.");
 
-                await _categoriaRepositorio.Add(categoria);
+                return await _categoriaRepositorio.Add(categoria);
             }
             catch (Exception ex)
             {
@@ -71,19 +71,25 @@ namespace SistemaVenda.Dominio.Servicos
             }
         }
 
-        public async Task EditarCategoria(Categoria categoria)
+        public async Task<Categoria> EditarCategoria(Categoria categoria)
         {
             try
             {
                 _logger.LogInformation("Atualizando categoria.");
 
-                await _categoriaRepositorio.Update(categoria);
+                return await _categoriaRepositorio.Update(categoria);
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Erro ao atualizar categoria. Detalhes: {ex.Message}");
                 throw;
             }
+        }
+
+        public void Dispose()
+        {
+            _categoriaRepositorio = null;
+            _logger = null;
         }
     }
 }

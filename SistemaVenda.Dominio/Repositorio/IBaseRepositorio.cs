@@ -11,6 +11,6 @@ namespace SistemaVenda.Dominio.Repositorio
         Task<IEnumerable<TEntity>> GetAll();
         Task<TEntity> Add(TEntity entity);
         Task<TEntity> Update(TEntity entity);
-        Task Remove(TEntity entity);
+        Task<TEntity> Remove(TEntity entity);
     }
 }

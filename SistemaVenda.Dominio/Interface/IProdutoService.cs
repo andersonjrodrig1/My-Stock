@@ -8,5 +8,6 @@ namespace SistemaVenda.Dominio.Interface
     public interface IProdutoService : IDisposable
     {
         Task<IEnumerable<Produto>> GetProdutos();
+        Task<Produto> SalvarProduto(Produto produto);
     }
 }

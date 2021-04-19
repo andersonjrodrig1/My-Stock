@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 using FluentAssertions;
+using System.Linq;
 
 namespace SistemaVenda.Test
 {
@@ -45,6 +46,23 @@ namespace SistemaVenda.Test
             var produtosRet = await _produtoService.GetProdutos();
 
             produtosRet.Should().BeEquivalentTo(_produtos);
+        }
+
+        [Fact]
+        public async Task SaveProdutoTest()
+        {
+            var faker = new Faker<Produto>().RuleFor(p => p.Codigo, 0)
+                                            .RuleFor(p => p.Descricao, f => f.Name.ToString())
+                                            .RuleFor(p => p.Quantidade, f => f.Random.Double())
+                                            .RuleFor(p => p.Valor, f => f.Random.Decimal())
+                                            .RuleFor(p => p.CodigoCategoria, f => f.Random.Int());
+
+            _produto = faker.Generate(1).First();
+
+            _produtoRepMock.Setup(p => p.Add(It.IsAny<Produto>())).ReturnsAsync(() => _produto);
+            var produtoRet = await _produtoService.SalvarProduto(_produto);
+
+            produtoRet.Should().BeEquivalentTo(_produto);
         }
     }
 }

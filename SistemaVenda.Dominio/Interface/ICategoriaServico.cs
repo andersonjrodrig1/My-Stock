@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaVenda.Dominio.Interface
 {
-    public interface ICategoriaServico
+    public interface ICategoriaServico : IDisposable
     {
         Task<IEnumerable<Categoria>> GetCategorias();
         Task<Categoria> GetCategoria(int codigoCategoria);
-        Task SaveCategoria(Categoria categoria);
-        Task EditarCategoria(Categoria categoria);
+        Task<Categoria> SaveCategoria(Categoria categoria);
+        Task<Categoria> EditarCategoria(Categoria categoria);
     }
 }

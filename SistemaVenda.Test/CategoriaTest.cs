@@ -64,9 +64,9 @@ namespace SistemaVenda.Test
             _categoria = _fixture.Create<Categoria>();
 
             _categoriaRepositorio.Setup(c => c.Add(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
-            await _categoriaServico.SaveCategoria(_categoria);
+            var categoriaResult = await _categoriaServico.SaveCategoria(_categoria);
 
-            Assert.True(true);
+            categoriaResult.Should().BeEquivalentTo(_categoria);
         }
 
         [Fact]
@@ -75,9 +75,9 @@ namespace SistemaVenda.Test
             _categoria = _fixture.Create<Categoria>();
 
             _categoriaRepositorio.Setup(c => c.Update(It.IsAny<Categoria>())).ReturnsAsync(() => _categoria);
-            await _categoriaServico.EditarCategoria(_categoria);
+            var categoriaResult = await _categoriaServico.EditarCategoria(_categoria);
 
-            Assert.True(true);
+            categoriaResult.Should().BeEquivalentTo(_categoria);
         }
     }
 }

@@ -34,9 +34,12 @@ namespace SistemaVenda
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             var connectionString = Configuration.GetConnectionString("MyStock");
 
-            services.AddDbContext<ApplicationDbContext>(options => options.UseLazyLoadingProxies().UseSqlServer(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseLazyLoadingProxies().UseSqlServer(connectionString, x => x.MigrationsAssembly("SistemaVenda")));
 
             services.AddHttpContextAccessor();
             services.AddDistributedMemoryCache();
@@ -54,7 +57,6 @@ namespace SistemaVenda
             services.AddTransient<ICategoriaRepositorio, CategoriaRepositorioImpl>();
             services.AddTransient<IProdutoRepositorio, ProdutoRepositorioImpl>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

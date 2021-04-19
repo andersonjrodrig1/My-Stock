@@ -10,3 +10,6 @@ E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repos
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.csproj.CopyComplete
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.dll
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Repositorio.runtimeconfig.json
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\bin\Debug\netcoreapp2.2\SistemaVenda.Repositorio.runtimeconfig.dev.json
+E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Repository\obj\Debug\netcoreapp2.2\SistemaVenda.Repositorio.genruntimeconfig.cache
