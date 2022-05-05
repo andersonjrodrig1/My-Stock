@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HRy81a7NebEZgJY9F6prJaf1nCGaLgugMHccxkrixwUVbGmlsRUBtzzDHVnpOJza9jJkFS1YvHhtVOBrA8xqkw==",
+  "dgSpecHash": "Qt8eUxwgF0nvJo3++pMWmhLYhIvO8A31J8D9l31fhpr26ACe5NgURn4ENYHeXRpWR12eGyQBvrrzSMS8y0esEQ==",
   "success": true,
-  "projectFilePath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+  "projectFilePath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",

@@ -10,3 +10,28 @@ E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Domin
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.json
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.dev.json
 E:\Desenvolvimento\Visual Studio\CSharp\Projetos\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.genruntimeconfig.cache
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.deps.json
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.json
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.dev.json
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.csprojAssemblyReference.cache
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.AssemblyInfoInputs.cache
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.AssemblyInfo.cs
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.csproj.CoreCompileInputs.cache
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Desenvolvimento\Visual Studio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.genruntimeconfig.cache
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.deps.json
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.json
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.runtimeconfig.dev.json
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\bin\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.csproj.AssemblyReference.cache
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.AssemblyInfoInputs.cache
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.AssemblyInfo.cs
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.csproj.CoreCompileInputs.cache
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.dll
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.pdb
+E:\Projetos\VisualStudio\CSharp\SistemaVenda\SistemaVenda.Dominio\obj\Debug\netcoreapp2.2\SistemaVenda.Dominio.genruntimeconfig.cache

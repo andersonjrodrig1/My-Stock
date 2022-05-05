@@ -12087,11 +12087,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+      "projectUniqueName": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
       "projectName": "SistemaVenda.Dominio",
-      "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+      "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\obj\\",
+      "outputPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12144,7 +12144,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

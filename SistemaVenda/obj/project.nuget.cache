@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ey0F6m9erU9bcqIK8qG29w/sHo6IMPD42aOT6Jt6f8/D4MSZufqfHZZrp7FyB7oz3LS+jgxO5mkrb9ttIEwSYQ==",
+  "dgSpecHash": "ZVSmpDPvDWvMAZMTfWFn3ls7xUrREPWzLlWVP4B4Dys6oMAaka4UcBVsUVBvE3IFmFO9XPAcPpGlIAJ2HJRsqg==",
   "success": true,
-  "projectFilePath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
+  "projectFilePath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\ander\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",

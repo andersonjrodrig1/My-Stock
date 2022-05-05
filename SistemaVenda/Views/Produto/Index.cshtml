@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SistemaVenda.Dominio.Entidades.Produto>;
+﻿@model IEnumerable<SistemaVenda.Models.ProdutoViewModel>;
 
 @{
     ViewData["Title"] = "Produtos";
@@ -25,7 +25,7 @@
                 <td>@item.Descricao</td>
                 <td>@item.Quantidade</td>
                 <td>@item.Valor</td>
-                <td>@item.Categoria.Descricao</td>
+                <td></td>
                 <td><a asp-action="Cadastro" asp-route-id="@item.Codigo">Editar</a></td>
             </tr>
         }

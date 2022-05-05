@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QNHNI9cRQhZmwce9DxxXzDhNsXYorIt+zA//4w+WGpkR5uLFtuLcJ7JgoLYfcXsrE3Gug6AqHoceOKVADvugBw==",
+  "dgSpecHash": "4nqSyTeGqDdoK40mBBrvdK+iW7wc74B1EaDKVWYF6cbShYDn0uD1Tpk22hnnI8DquZpmuQSOl/Y804yAkTMEYg==",
   "success": true,
-  "projectFilePath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
+  "projectFilePath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ander\\.nuget\\packages\\castle.core\\4.2.1\\castle.core.4.2.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\libuv\\1.10.0\\libuv.1.10.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {}
+    "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {}
   },
   "projects": {
-    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
+    "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+        "projectUniqueName": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
         "projectName": "SistemaVenda.Dominio",
-        "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
+        "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj",
         "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\obj\\",
+        "outputPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,18 +64,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
+    "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
+        "projectUniqueName": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
         "projectName": "SistemaVenda.Repositorio",
-        "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
+        "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj",
         "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-        "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\obj\\",
+        "outputPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -95,8 +95,8 @@
           "netcoreapp2.2": {
             "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
-                "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj"
+              "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj": {
+                "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Dominio\\SistemaVenda.Dominio.csproj"
               }
             }
           }
@@ -152,7 +152,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }

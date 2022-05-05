@@ -15711,11 +15711,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
+      "projectUniqueName": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
       "projectName": "SistemaVenda",
-      "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
+      "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda\\SistemaVenda.csproj",
       "packagesPath": "C:\\Users\\ander\\.nuget\\packages\\",
-      "outputPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda\\obj\\",
+      "outputPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15735,8 +15735,8 @@
         "netcoreapp2.2": {
           "targetAlias": "netcoreapp2.2",
           "projectReferences": {
-            "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
-              "projectPath": "E:\\Desenvolvimento\\Visual Studio\\CSharp\\Projetos\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj"
+            "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj": {
+              "projectPath": "E:\\Projetos\\VisualStudio\\CSharp\\SistemaVenda\\SistemaVenda.Repository\\SistemaVenda.Repositorio.csproj"
             }
           }
         }
@@ -15791,7 +15791,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
