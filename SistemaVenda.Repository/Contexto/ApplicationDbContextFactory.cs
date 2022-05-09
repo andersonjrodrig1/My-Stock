@@ -14,7 +14,7 @@ namespace SistemaVenda.Repositorio.Contexto
             IConfiguration configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", true, true).Build();
 
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=MY_STOCK;user id=sa;password=admin123Pwd;");
+            optionsBuilder.UseSqlServer("Data Source=localhost,1433;Initial Catalog=MY_STOCK;user id=sa;password=123456Pwd@;");
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }
